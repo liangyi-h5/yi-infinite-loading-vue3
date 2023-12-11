@@ -1,69 +1,4 @@
 
-# infinite-loading-vue3
-An infinite scroll component for Vue 3.0 apps
-
-## Installation
-```
-npm install yi-infinite-loading-vue3
-```
-
-## Usage
-
-global use
-```
-import { createApp } from 'vue'
-import App from './App.vue'
-import YiInfiniteScroll from 'yi-infinite-loading-vue3'
-
-const app = createApp(App)
-
-app.component("YiInfiniteScroll", YiInfiniteScroll)
-app.mount('#app')
-
-```
-
-introduced separately
-```
-import InfiniteScroll from "yi-infinite-loading-vue3"
-
-<script>
-  export default {
-    components: {
-      InfiniteScroll
-    }
-  }
-</script>
-
-<template>
-  <div>
-    <yi-infinite-scroll
-      :loading="isLoading"
-      :finished="finished"
-      :offset="100"
-      @loadMore="loadMore">
-    </yi-infinite-scroll>
-  </div>
-</template>
-
-```
-
-
-## Props
-
-| props             | description                     | type               | default    |
-| --------------- | ---------- | ---------- | ---------- |
-| loadMore      | callback | function | function |
-| loading | is loading | booblean | false |
-| finished | is loaded | boolean | false |
-| offset | distance from bottom | string ｜ number | 0 |
-| hideLoading | Whether to hide the default loading status | boolean | false |
-
-
-## Example
-Let's see the *yi-infinite-loading-vue3* package in action.
-
-```
-
 <template>
   <div class="infinite-scroll-box">
     <ul class="infinite-scroll-list">
@@ -156,6 +91,3 @@ button{
   text-align: center;
 }
 </style>
-
-
-```

@@ -1,15 +1,16 @@
 
 # infinite-loading-vue3
-An infinite scroll component for Vue 3.0 apps
+Vue 3.0 应用程序的无限滚动组件
 
-## Installation
+## 安装
 ```
 npm install yi-infinite-loading-vue3
 ```
 
+
 ## Usage
 
-global use
+全局使用
 ```
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -22,7 +23,7 @@ app.mount('#app')
 
 ```
 
-introduced separately
+单独引入
 ```
 import InfiniteScroll from "yi-infinite-loading-vue3"
 
@@ -50,17 +51,17 @@ import InfiniteScroll from "yi-infinite-loading-vue3"
 
 ## Props
 
-| props             | description                     | type               | default    |
+| props             | 说明                     | 类型               | 默认值    |
 | --------------- | ---------- | ---------- | ---------- |
-| loadMore      | callback | function | function |
-| loading | is loading | booblean | false |
-| finished | is loaded | boolean | false |
-| offset | distance from bottom | string ｜ number | 0 |
-| hideLoading | Whether to hide the default loading status | boolean | false |
+| loadMore            | 回调函数 | function |  |
+| loading | 是否加载状态 | booblean | false |
+| finished | 是加载完毕 | boolean | false |
+| offset | 距离底部的距离 | string ｜ number | 0 |
+| hideLoading | 是否隐藏默认加载状态 | boolean | false |
 
 
-## Example
-Let's see the *yi-infinite-loading-vue3* package in action.
+## 例子
+让我们看看 yi-infinite-loading-vue3 包的实际应用。
 
 ```
 
