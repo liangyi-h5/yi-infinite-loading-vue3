@@ -27,16 +27,13 @@ import { ref, onMounted, onUnmounted, computed } from 'vue'
 defineOptions({
   name: 'YiInfiniteScroll'
 })
-const props = withDefaults(
-  defineProps(),
-  {
+const props = defineProps({
     loading: false, // Is loading ...
     finished: true, // Is loading completed
     offset: 0, // Positioning offset
     horization: false, // Load horizontally
     hideLoading: false // Hide the default loading effect
-  }
-)
+  })
 const emits = defineEmits(['loadMore'])
 
 const observerRef = ref(null)
