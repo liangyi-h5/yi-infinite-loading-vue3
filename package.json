@@ -23,7 +23,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "dev": "vite dev ./demo/main.ts"
+    "dev": "vite dev ./demo/main.ts",
+    "pre-release": "git checkout main && git pull",
+    "branch-merge": "git push --tags && git push",
+    "release-patch": "npm run pre-release && npm version patch -m \"tag: Version updated to %s patch\" && npm run branch-merge",
+    "release-minor": "npm run pre-release && npm version minor -m \"tag: Version updated to %s minor\" && npm run branch-merge",
+    "release-major": "npm run pre-release && npm version major -m \"tag: Version updated to %s major\" && npm run branch-merge"
   },
   "exports": {
     ".": {
