@@ -1,10 +1,15 @@
 {
   "name": "yi-infinite-loading-vue3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Infinite Loading Component for Vue 3",
   "main": "./dist/esm/index.js",
   "type": "module",
-  "keywords": ["vue3", "scroll", "infinite-loading", "vue"],
+  "keywords": [
+    "vue3",
+    "scroll",
+    "infinite-loading",
+    "vue"
+  ],
   "author": "Liangxian li",
   "license": "ISC",
   "bugs": {
