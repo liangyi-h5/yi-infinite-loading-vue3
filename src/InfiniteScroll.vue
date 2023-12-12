@@ -1,13 +1,13 @@
 <template>
   <div
-    class="yi-infinite-scroll"
+    class="yi-infinite-loading"
     :class="{
       horization: horization
     }"
   >
     <span
       ref="observerRef"
-      class="yi-infinite-scroll-observer"
+      class="yi-infinite-loading-observer"
       :style="observerStyle"
     ></span>
     <div
@@ -82,7 +82,7 @@ onUnmounted(() => {
 </script>
 
 <style>
-.yi-infinite-scroll{
+.yi-infinite-loading{
   min-height: 1px;
   position: relative;
   padding: 8px;
@@ -90,7 +90,7 @@ onUnmounted(() => {
 .horization {
   min-width: 1px;
 }
-.yi-infinite-scroll-observer{
+.yi-infinite-loading-observer{
   position: absolute;
   bottom: 0;
   left: 0;
