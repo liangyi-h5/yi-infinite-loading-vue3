@@ -23,17 +23,17 @@
 </template>
 
 <script setup >
-import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { ref, onMounted, onUnmounted, computed, defineProps, defineEmits, defineOptions } from 'vue'
 defineOptions({
-  name: 'YiInfiniteScroll'
+  name: 'yi-infinite-loading'
 })
 const props = defineProps({
-    loading: false, // Is loading ...
-    finished: true, // Is loading completed
-    offset: 0, // Positioning offset
-    horization: false, // Load horizontally
-    hideLoading: false // Hide the default loading effect
-  })
+  loading: false, // Is loading ...
+  finished: true, // Is loading completed
+  offset: 0, // Positioning offset
+  horization: false, // Load horizontally
+  hideLoading: false // Hide the default loading effect
+})
 const emits = defineEmits(['loadMore'])
 
 const observerRef = ref(null)
