@@ -18,7 +18,10 @@ import YiInfiniteScroll from 'yi-infinite-loading-vue3'
 
 const app = createApp(App)
 
-app.component("YiInfiniteScroll", YiInfiniteScroll)
+
+// app.component("YiInfiniteScroll", YiInfiniteScroll)
+// or
+app.use(YiInfiniteScroll)
 app.mount('#app')
 
 ```
@@ -48,6 +51,21 @@ import InfiniteScroll from "yi-infinite-loading-vue3"
 
 ```
 
+## 支持 typescript 
+
+src/components.d.ts
+```
+import YiInfiniteScroll from "yi-infinite-loading-vue3"
+
+/**
+ * @desc ts 声明全局注册组件
+ */
+declare module "@vue/runtime-core" {
+  export interface GlobalComponents {
+    YiInfiniteScroll: typeof YiInfiniteScroll
+  }
+}
+```
 
 ## Props
 
@@ -60,8 +78,8 @@ import InfiniteScroll from "yi-infinite-loading-vue3"
 | hideLoading | 是否隐藏默认加载状态 | boolean | false |
 
 
-## 例子
-让我们看看 yi-infinite-loading-vue3 包的实际应用。
+## Example
+Let's see the *yi-infinite-loading-vue3* package in action.
 
 ```
 
@@ -72,7 +90,7 @@ import InfiniteScroll from "yi-infinite-loading-vue3"
         {{ item }}
       </li>
     </ul>
-    <InfiniteScroll
+    <YiInfiniteScroll
       :loading="isLoading"
       :finished="finished"
       offset="100%"
@@ -81,7 +99,7 @@ import InfiniteScroll from "yi-infinite-loading-vue3"
     >
       <span class="tips" v-if="isLoading">loading...</span>
       <span class="tips" v-if="finished">end...</span>
-    </InfiniteScroll>
+    </YiInfiniteScroll>
   </div>
   <div class="clear" >
     <button @click="clear" >clear</button>
@@ -98,8 +116,6 @@ const a = ref(false)
 
 const loadMore = () => {
   a.value = true
-  console.log('loadMore')
-  console.log(isLoading.value)
   if (isLoading.value) {
     return
   }
@@ -113,7 +129,6 @@ const loadMore = () => {
     if (list.length > 100) {
       finished.value = true
     }
-    console.log(list.length)
   }, 1000)
 }
 
@@ -156,6 +171,8 @@ button{
   display: block;
   text-align: center;
 }
+</style>
+
 </style>
 
 

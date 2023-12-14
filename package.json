@@ -3,6 +3,7 @@
   "version": "1.1.1",
   "description": "A Infinite Loading Component for Vue 3",
   "main": "./dist/esm/index.js",
+  "types": "./types/index.d.ts",
   "type": "module",
   "keywords": [
     "vue3",
@@ -21,9 +22,7 @@
   },
   "homepage": "https://github.com/liangyi-h5/yi-infinite-loading-vue3#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "dev": "vite dev ./demo/main.ts",
     "pre-release": "git checkout main && git pull",
     "branch-merge": "git push --tags && git push",
     "release-patch": "npm run pre-release && npm version patch -m \"tag: Version updated to %s patch\" && npm run branch-merge",
@@ -33,9 +32,11 @@
   "exports": {
     ".": {
       "import": {
+        "types": "./types/index.d.ts",
         "default": "./dist/esm/index.js"
       },
       "require": {
+        "types": "./types/index.d.ts",
         "default": "./dist/lib/index.js"
       }
     },
@@ -51,13 +52,11 @@
     "@rollup/plugin-json": "^6.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^11.1.5",
-    "@types/node": "^20.10.3",
+    "@vue/compiler-sfc": "^3.3.11",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
     "rollup": "^4.6.1",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript2": "^0.36.0",
     "rollup-plugin-vue": "^6.0.0"
   }
 }

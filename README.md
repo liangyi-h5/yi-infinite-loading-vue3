@@ -17,7 +17,9 @@ import YiInfiniteScroll from 'yi-infinite-loading-vue3'
 
 const app = createApp(App)
 
-app.component("YiInfiniteScroll", YiInfiniteScroll)
+// app.component("YiInfiniteScroll", YiInfiniteScroll)
+// or
+app.use(YiInfiniteScroll)
 app.mount('#app')
 
 ```
@@ -47,6 +49,21 @@ import InfiniteScroll from "yi-infinite-loading-vue3"
 
 ```
 
+## support typescript 
+
+src/components.d.ts
+```
+import YiInfiniteScroll from "yi-infinite-loading-vue3"
+
+/**
+ * @desc ts Declare global registration components
+ */
+declare module "@vue/runtime-core" {
+  export interface GlobalComponents {
+    YiInfiniteScroll: typeof YiInfiniteScroll
+  }
+}
+```
 
 ## Props
 
@@ -71,7 +88,7 @@ Let's see the *yi-infinite-loading-vue3* package in action.
         {{ item }}
       </li>
     </ul>
-    <InfiniteScroll
+    <YiInfiniteScroll
       :loading="isLoading"
       :finished="finished"
       offset="100%"
@@ -80,7 +97,7 @@ Let's see the *yi-infinite-loading-vue3* package in action.
     >
       <span class="tips" v-if="isLoading">loading...</span>
       <span class="tips" v-if="finished">end...</span>
-    </InfiniteScroll>
+    </YiInfiniteScroll>
   </div>
   <div class="clear" >
     <button @click="clear" >clear</button>
@@ -97,8 +114,6 @@ const a = ref(false)
 
 const loadMore = () => {
   a.value = true
-  console.log('loadMore')
-  console.log(isLoading.value)
   if (isLoading.value) {
     return
   }
@@ -112,7 +127,6 @@ const loadMore = () => {
     if (list.length > 100) {
       finished.value = true
     }
-    console.log(list.length)
   }, 1000)
 }
 
@@ -155,6 +169,8 @@ button{
   display: block;
   text-align: center;
 }
+</style>
+
 </style>
 
 

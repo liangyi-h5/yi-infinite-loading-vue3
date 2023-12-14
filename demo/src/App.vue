@@ -6,7 +6,7 @@
         {{ item }}
       </li>
     </ul>
-    <InfiniteScroll
+    <YiInfiniteScroll
       :loading="isLoading"
       :finished="finished"
       offset="100%"
@@ -15,7 +15,7 @@
     >
       <span class="tips" v-if="isLoading">loading...</span>
       <span class="tips" v-if="finished">end...</span>
-    </InfiniteScroll>
+    </YiInfiniteScroll>
   </div>
   <div class="clear" >
     <button @click="clear" >clear</button>
@@ -32,8 +32,6 @@ const a = ref(false)
 
 const loadMore = () => {
   a.value = true
-  console.log('loadMore')
-  console.log(isLoading.value)
   if (isLoading.value) {
     return
   }
@@ -47,7 +45,6 @@ const loadMore = () => {
     if (list.length > 100) {
       finished.value = true
     }
-    console.log(list.length)
   }, 1000)
 }
 

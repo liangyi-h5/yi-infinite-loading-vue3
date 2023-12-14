@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<script setup >
+<script setup>
 import { ref, onMounted, onUnmounted, computed, defineProps, defineEmits, defineOptions } from 'vue'
 defineOptions({
   name: 'yi-infinite-loading'
@@ -56,7 +56,6 @@ const observerStyle = computed(() => {
   }
 })
 let observer
-// let observer: IntersectionObserver | null = null
 
 const loadMore = () => {
   if (props.loading || props.finished) return

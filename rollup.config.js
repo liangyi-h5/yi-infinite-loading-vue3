@@ -38,13 +38,13 @@ export default {
 	sourcemap: true,
 	plugins: [
 		vue({
-      style: {
-        postcssPlugins: [
-          autoprefixer(),
-          cssnano()
-        ]
-      }
-    }),
+			style: {
+				postcssPlugins: [
+					autoprefixer(),
+					cssnano()
+				]
+			}
+		}),
 		postcss({
 			minimize: true,
 			sourceMap: true,
@@ -57,6 +57,6 @@ export default {
 		}),
 		nodeResolve({ preferBuiltins: true }),
 		json(),
-		commonjs(),
+		commonjs()
 	]
-};
+}
