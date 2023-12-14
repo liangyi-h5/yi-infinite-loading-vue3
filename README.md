@@ -16,10 +16,7 @@ import App from './App.vue'
 import YiInfiniteScroll from 'yi-infinite-loading-vue3'
 
 const app = createApp(App)
-
-// app.component("YiInfiniteScroll", YiInfiniteScroll)
-// or
-app.use(YiInfiniteScroll)
+app.component("YiInfiniteScroll", YiInfiniteScroll)
 app.mount('#app')
 
 ```
