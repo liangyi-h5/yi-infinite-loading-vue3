@@ -1,4 +1,4 @@
-import YiInfiniteScroll from "../../src/index.d.ts"
+import YiInfiniteScroll from "../../types/index.d.ts"
 
 /**
  * @desc ts Declare global registration components
