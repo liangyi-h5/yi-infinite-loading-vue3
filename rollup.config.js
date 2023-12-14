@@ -9,6 +9,7 @@ import { readFileSync } from 'fs'
 import postcss from 'rollup-plugin-postcss'
 import autoprefixer from 'autoprefixer'
 import cssnano from 'cssnano'
+import copy from 'rollup-plugin-copy'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
@@ -57,6 +58,11 @@ export default {
 		}),
 		nodeResolve({ preferBuiltins: true }),
 		json(),
-		commonjs()
+		commonjs(),
+		copy({
+			targets: [
+        { src: 'src/index.d.ts', dest: 'dist' },
+      ]
+		})
 	]
 }
