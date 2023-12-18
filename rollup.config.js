@@ -15,22 +15,31 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 const pkg = JSON.parse(readFileSync(path.join(__dirname, './package.json'), 'utf-8'))
 const dependencies = (res) => {
-	return Object.keys(res.dependencies || {});
+	return Object.keys(res.dependencies || {})
 }
 
-const pkgdependencies = dependencies(pkg);
+const pkgdependencies = dependencies(pkg)
+
+const generateBuildPathUrl = (url = '') => {
+	switch (process.env.BUILD) {
+		case 'test':
+			return `demo/yi-infinite-loading-vue3/${url}`
+		default:
+			return `dist/${url}`
+	}
+}
 
 export default {
 	external: id => pkgdependencies.includes(id),
 	input: 'src/index.js',
 	output: [
 		{
-			file: 'dist/lib/index.js',
+			file: generateBuildPathUrl('lib/index.js'),
 			format: 'cjs',
 			plugins: [terser()]
 		},
 		{
-			file: 'dist/esm/index.js',
+			file: generateBuildPathUrl('esm/index.js'),
 			format: 'es',
 			name: 'version',
 			plugins: [terser()]
@@ -61,7 +70,7 @@ export default {
 		commonjs(),
 		copy({
 			targets: [
-        { src: 'src/index.d.ts', dest: 'dist' },
+        { src: 'src/index.d.ts', dest: generateBuildPathUrl() },
       ]
 		})
 	]

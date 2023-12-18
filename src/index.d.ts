@@ -1,4 +1,4 @@
-import { DefineComponent } from 'vue'
+import { DefineComponent, App } from 'vue'
 
 declare const YiInfiniteScroll: DefineComponent<{
   loading: boolean,
@@ -8,6 +8,8 @@ declare const YiInfiniteScroll: DefineComponent<{
   hideLoading?: boolean,
 }, {
   loadMore: () => void
-}>
+}> & {
+  install(app: App): any
+}
 
 export default YiInfiniteScroll

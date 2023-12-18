@@ -16,7 +16,9 @@ import App from './App.vue'
 import YiInfiniteScroll from 'yi-infinite-loading-vue3'
 
 const app = createApp(App)
-app.component("YiInfiniteScroll", YiInfiniteScroll)
+// app.component("YiInfiniteScroll", YiInfiniteScroll)
+// or 
+app.use(YiInfiniteScroll)
 app.mount('#app')
 
 ```
@@ -107,10 +109,8 @@ import { reactive, ref } from 'vue'
 const list = reactive<number[]>([])
 const isLoading = ref(false)
 const finished = ref(false)
-const a = ref(false)
 
 const loadMore = () => {
-  a.value = true
   if (isLoading.value) {
     return
   }
