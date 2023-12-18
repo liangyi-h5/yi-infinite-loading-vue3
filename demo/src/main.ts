@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import YiInfiniteScroll from '../yi-infinite-loading-vue3'
+import YiInfiniteScroll from 'yi-infinite-loading-vue3'
 
 const app = createApp(App)
 
