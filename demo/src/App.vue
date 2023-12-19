@@ -60,6 +60,8 @@ const clear = () => {
   height: 50vh;
   overflow-y: auto;
   border: 1px solid #000;
+  max-width: 300px;
+  margin: auto;
 }
 .infinite-scroll-list{
   width: 100%;
@@ -86,5 +88,10 @@ button{
 .tips{
   display: block;
   text-align: center;
+}
+.clear{
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 </style>
