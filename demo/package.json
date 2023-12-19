@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build --outDir ../docs"
+    "build": "vue-tsc &&  NODE_ENV=production vite build --outDir ../docs"
   },
   "dependencies": {
     "vue": "^3.3.9"
