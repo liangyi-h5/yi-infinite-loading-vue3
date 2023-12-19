@@ -43,12 +43,6 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install dependencies
         run: npm ci # or pnpm install / yarn install / bun install
-      - name: cd demo
-        run: cd demo # or pnpm install / yarn install / bun install
-      - name: Install dependencies
-        run: npm ci
-      - name: cd ..
-        run: cd ..
       - name: Build with demo
         run: |
           npm run build:demo
