@@ -6,8 +6,7 @@
 # src/**/*
 # package-lock.json
 # rollup.config.js
-
-**/*
+.DS_Store
 !/dist/**
 !LICENSE
 !README.md
