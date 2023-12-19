@@ -1,6 +1,6 @@
 {
   "name": "yi-infinite-loading-vue3",
-  "version": "1.2.12",
+  "version": "1.3.0",
   "description": "A Infinite Loading Component for Vue 3",
   "main": "./dist/esm/index.js",
   "types": "./dist/index.d.ts",
