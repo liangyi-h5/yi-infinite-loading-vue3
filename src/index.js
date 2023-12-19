@@ -1,8 +1,8 @@
-import InfiniteScroll from './InfiniteScroll.vue'
+import InfiniteLoading from './InfiniteLoading.vue'
 
-InfiniteScroll.install = (app) => {
-  app.component(InfiniteScroll.name, InfiniteScroll)
+InfiniteLoading.install = (app) => {
+  app.component(InfiniteLoading.name, InfiniteLoading)
 }
-export const YiInfiniteScroll = InfiniteScroll
+export const YiInfiniteLoading = InfiniteLoading
 
-export default YiInfiniteScroll
+export default YiInfiniteLoading

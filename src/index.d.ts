@@ -1,6 +1,6 @@
 import { DefineComponent, App } from 'vue'
 
-export declare const YiInfiniteScroll: DefineComponent<{
+export declare const YiInfiniteLoading: DefineComponent<{
   loading: boolean,
   finished?: boolean,
   offset?: number | string,
@@ -12,4 +12,4 @@ export declare const YiInfiniteScroll: DefineComponent<{
   install(app: App): any
 }
 
-export default YiInfiniteScroll
+export default YiInfiniteLoading

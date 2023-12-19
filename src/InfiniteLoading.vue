@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed, defineProps, defineEmits, defineOptions } from 'vue'
+import { ref, onMounted, onUnmounted, computed, defineOptions } from 'vue'
 defineOptions({
   name: 'yi-infinite-loading'
 })

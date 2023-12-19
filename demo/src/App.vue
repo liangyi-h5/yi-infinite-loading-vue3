@@ -6,7 +6,7 @@
         {{ item }}
       </li>
     </ul>
-    <YiInfiniteScroll
+    <YiInfiniteLoading
       :loading="isLoading"
       :finished="finished"
       offset="100%"
@@ -15,7 +15,7 @@
     >
       <span class="tips" v-if="isLoading">loading...</span>
       <span class="tips" v-if="finished">end...</span>
-    </YiInfiniteScroll>
+    </YiInfiniteLoading>
   </div>
   <div class="clear" >
     <button @click="clear" >clear</button>

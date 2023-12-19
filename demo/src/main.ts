@@ -1,9 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { YiInfiniteScroll } from 'yi-infinite-loading-vue3'
+import YiInfiniteLoading from '../../'
 
 const app = createApp(App)
 
-// app.component("YiInfiniteScroll", YiInfiniteScroll)
-app.use(YiInfiniteScroll)
+app.component("YiInfiniteLoading", YiInfiniteLoading)
 app.mount('#app')

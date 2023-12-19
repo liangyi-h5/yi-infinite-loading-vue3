@@ -21,12 +21,7 @@ const dependencies = (res) => {
 const pkgdependencies = dependencies(pkg)
 
 const generateBuildPathUrl = (url = '') => {
-	switch (process.env.BUILD) {
-		case 'test':
-			return `demo/node_modules/yi-infinite-loading-vue3/${url}`
-		default:
-			return `dist/${url}`
-	}
+	return `dist/${url}`
 }
 
 export default {

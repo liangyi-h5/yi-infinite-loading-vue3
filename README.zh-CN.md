@@ -1,6 +1,6 @@
 
 # infinite-loading-vue3
-Vue 3.0 应用程序的无限滚动组件
+Vue 3.0 应用程序的无限加载组件
 
 ## 安装
 ```
@@ -14,36 +14,36 @@ npm install yi-infinite-loading-vue3
 ```
 import { createApp } from 'vue'
 import App from './App.vue'
-import YiInfiniteScroll from 'yi-infinite-loading-vue3'
+import YiInfiniteLoading from 'yi-infinite-loading-vue3'
 
 const app = createApp(App)
-// app.component("YiInfiniteScroll", YiInfiniteScroll)
+// app.component("YiInfiniteLoading", YiInfiniteLoading)
 // or 
-app.use(YiInfiniteScroll)
+app.use(YiInfiniteLoading)
 app.mount('#app')
 
 ```
 
 单独引入
 ```
-import InfiniteScroll from "yi-infinite-loading-vue3"
+import YiInfiniteLoading from "yi-infinite-loading-vue3"
 
 <script>
   export default {
     components: {
-      InfiniteScroll
+      YiInfiniteLoading
     }
   }
 </script>
 
 <template>
   <div>
-    <yi-infinite-scroll
+    <yi-infinite-loading
       :loading="isLoading"
       :finished="finished"
       :offset="100"
       @loadMore="loadMore">
-    </yi-infinite-scroll>
+    </yi-infinite-loading>
   </div>
 </template>
 
@@ -53,14 +53,14 @@ import InfiniteScroll from "yi-infinite-loading-vue3"
 
 src/components.d.ts
 ```
-import YiInfiniteScroll from "yi-infinite-loading-vue3"
+import YiInfiniteLoading from "yi-infinite-loading-vue3"
 
 /**
  * @desc ts 声明全局注册组件
  */
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
-    YiInfiniteScroll: typeof YiInfiniteScroll
+    YiInfiniteLoading: typeof YiInfiniteLoading
   }
 }
 ```
@@ -88,7 +88,7 @@ Let's see the *yi-infinite-loading-vue3* package in action.
         {{ item }}
       </li>
     </ul>
-    <YiInfiniteScroll
+    <YiInfiniteLoading
       :loading="isLoading"
       :finished="finished"
       offset="100%"
@@ -97,7 +97,7 @@ Let's see the *yi-infinite-loading-vue3* package in action.
     >
       <span class="tips" v-if="isLoading">loading...</span>
       <span class="tips" v-if="finished">end...</span>
-    </YiInfiniteScroll>
+    </YiInfiniteLoading>
   </div>
   <div class="clear" >
     <button @click="clear" >clear</button>

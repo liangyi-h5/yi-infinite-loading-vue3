@@ -23,7 +23,8 @@
   "homepage": "https://github.com/liangyi-h5/yi-infinite-loading-vue3#readme",
   "scripts": {
     "build": "rollup -c",
-    "build:test": "rollup -c --environment BUILD:test",
+    "dev": "npm run build && cd demo && npm run dev",
+    "build:demo": "npm run build && cd demo && npm run build",
     "pre-release": "git checkout main && git pull",
     "branch-merge": "git push --tags && git push",
     "release-patch": "npm run pre-release && npm version patch -m \"tag: Version updated to %s patch\" && npm run branch-merge",
