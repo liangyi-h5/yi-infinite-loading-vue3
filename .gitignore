@@ -90,7 +90,8 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
-docs
+README.md
+README.zh-CN.md
 
 # Gatsby files
 .cache/
