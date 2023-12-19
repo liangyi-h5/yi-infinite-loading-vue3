@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/liangyi-h5/yi-infinite-loading-vue3.git"
   },
-  "homepage": "https://github.com/liangyi-h5/yi-infinite-loading-vue3#readme",
+  "homepage": "https://github.com/liangyi-h5/yi-infinite-loading-vue3",
   "scripts": {
     "build": "rollup -c",
     "dev": "npm run build && cd demo && npm run dev",
