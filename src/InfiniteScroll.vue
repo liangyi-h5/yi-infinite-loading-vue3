@@ -66,7 +66,7 @@ onMounted(() => {
   if (observerRef.value) {
     const el = observerRef.value
     const screenView = window.visualViewport || window.screen
-    viewport.value = props.horization ? screenView.height : screenView.width
+    viewport.value = props.horization ? screenView.width : screenView.height
     observer = new IntersectionObserver(entries => {
       if (entries[0] && entries[0].isIntersecting) {
         loadMore()

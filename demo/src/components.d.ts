@@ -1,4 +1,4 @@
-import YiInfiniteScroll from "../../src/index.d.ts"
+import YiInfiniteScroll from 'yi-infinite-loading-vue3'
 
 /**
  * @desc ts Declare global registration components

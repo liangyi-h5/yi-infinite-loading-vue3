@@ -1,6 +1,6 @@
 import { DefineComponent, App } from 'vue'
 
-declare const YiInfiniteScroll: DefineComponent<{
+export declare const YiInfiniteScroll: DefineComponent<{
   loading: boolean,
   finished?: boolean,
   offset?: number | string,
