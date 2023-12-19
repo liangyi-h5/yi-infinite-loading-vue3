@@ -1,15 +1,9 @@
 
-# demo
-# demo/**/*
+demo
 
-# src
-# src/**/*
-# package-lock.json
-# rollup.config.js
+node_modules
 
-**/*
-.DS_Store
-!/dist/**
-!LICENSE
-!README.md
-!README.zh-CN.md
+src
+
+package-lock.json
+rollup.config.js
