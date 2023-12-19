@@ -7,6 +7,7 @@ Vue 3.0 应用程序的无限加载组件
 npm install yi-infinite-loading-vue3
 ```
 
+<h3><a href="https://liangyi-h5.github.io/yi-infinite-loading-vue3/">demo</a>
 
 ## Usage
 

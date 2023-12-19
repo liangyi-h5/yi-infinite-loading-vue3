@@ -7,6 +7,8 @@ An infinite loading component for Vue 3.0 apps
 npm install yi-infinite-loading-vue3
 ```
 
+<h3><a href="https://liangyi-h5.github.io/yi-infinite-loading-vue3/">demo</a>
+
 ## Usage
 
 global use
