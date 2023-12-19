@@ -1,6 +1,14 @@
 
-demo
-demo/**/*
+# demo
+# demo/**/*
 
-src
-src/**/*
+# src
+# src/**/*
+# package-lock.json
+# rollup.config.js
+
+**/*
+!/dist/**
+!LICENSE
+!README.md
+!README.zh-CN.md
